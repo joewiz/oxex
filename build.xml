@@ -69,7 +69,7 @@
         <echo message="Uploading package ${repo-name} ..."/>
         <xdb:store uri="${local.instance.temp}" user="${local.instance.user}"
             password="${local.instance.password}" createcollection="true"
-            srcfile="${apps.dir}/${repo-name}/${build}/${xar}"/>
+            srcfile="${apps.dir}/${repo-name}/build/${xar}"/>
     </target>
 
     <target name="deploy.upload-one-to-production" depends="deploy.get-xar-filename">
