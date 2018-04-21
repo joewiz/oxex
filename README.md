@@ -2,7 +2,11 @@
 
 An oXygen project file to simplify common tasks in eXist app development. 
 
-The core file is `oxex.xpr`, an oXygen project file that defines a set of entries for oXygen's [External Tools](https://www.oxygenxml.com/doc/versions/20.0/ug-editor/topics/integrating-external-tools.html) menu. Once you open the `oxex.xpr` file in oXygen, you will see a new menu in your toolbar containing commands that perform the following tasks:
+The core file is `oxex.xpr`, an oXygen project file that defines a set of entries for oXygen's [External Tools](https://www.oxygenxml.com/doc/versions/20.0/ug-editor/topics/integrating-external-tools.html) menu. Once you open the `oxex.xpr` file in oXygen, you will see a new menu in your toolbar:
+
+![Screenshot of oXygen External Tools menu with oxex.xpr entries](https://user-images.githubusercontent.com/59118/39088768-11a1c806-4586-11e8-82aa-ce3e41983a80.png)
+
+These entries perform the following tasks:
 
 - Upload the currently open file to eXist. The file is uploaded from its location on the filesystem to the corresponding location inside of `/db/apps` (the conventional location where applications installed in the eXist database). Also, you can delete the current file from eXist—all without drilling into oXygen's [Data Source Explorer](https://www.oxygenxml.com/xml_editor/eXist_support.html) for eXist.
 - Fetch updates from a remote git repository containing the app's files (without switching to or activating a git client)
