@@ -37,7 +37,7 @@
                                     <String>Download required files for interacting with eXist</String>
                                 </field>
                                 <field name="name">
-                                    <String>Setup</String>
+                                    <String>Setup oxex</String>
                                 </field>
                                 <field name="workingDirectory">
                                     <String>${pd}</String>
