@@ -11,10 +11,17 @@ These entries perform the following tasks:
 - Upload the currently open file to eXist. The file is uploaded from its location on the filesystem to the corresponding location inside of `/db/apps`—the conventional location where applications installed in the eXist database. Also, you can delete the current file from eXist—all without drilling into oXygen's eXist [Data Source](https://www.oxygenxml.com/xml_editor/eXist_support.html).
 - Fetch updates from the file's parent git repository. Without switching to or activating a git client.
 - Build and deploy the app to eXist. Assumes your app can be built by calling its Apache Ant build.xml file that is commonly used to package applications into for [EXPath Packages](http://expath.org/spec/pkg) in the eXist community.
-- Wipe the eXist database. Sometimes you just want a clean start.
+- Wipe the eXist database. Sometimes you just need a clean start.
 - Open the current repository in commonly used apps like GitHub Desktop or Atom (pre-populating a [`.existdb.json` file](https://github.com/eXist-db/atom-existdb#automatic-sync) used by the [Atom editor package for eXist-db](https://atom.io/packages/existdb))
 
 These commands simply pass information from oXygen to the ant scripts. 
+
+## Dependencies
+
+- Apache Ant
+- Apache Maven
+
+To install these dependencies on macOS with [Homebrew](https://brew.sh), just run `brew install ant maven`.
 
 ## Setup
 
@@ -22,7 +29,7 @@ These commands simply pass information from oXygen to the ant scripts.
 - Make a copy of `build.properties`, called `local.build.properties`.
 - Supply the full path to your `workspace` directory in the property, `apps.home`; and supply your eXist credentials in `local.instance.user` and `local.instance.password`.
 - Open the `oxex.xpr` file in oXygen, which will cause oXygen to open the Project pane with the parent directory, and which will configure an External Tools menu with oxex's commands.
-- Select the "Setup" command to download required libraries for interacting with eXist. This is only needed once.
+- Select the "Setup oxex" command to download required libraries for interacting with eXist. This is only needed once.
 - Using oXygen's project pane, open a file in one of your eXist applications (e.g., `workspace/my-app/my-file`).
 - Select the "Upload current file to localhost" to upload the file to the database (e.g., `/db/apps/my-app/my-file`) (keyboard shortcut: command-u).
 - Select the "Deploy current repository to localhost" to call the app's own `build.xml` file and upload and deploy the resulting `.xar` file (conventionally stored in the repo's build directory)..
