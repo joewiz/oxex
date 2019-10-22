@@ -13,7 +13,7 @@ declare variable $temp external;
 declare variable $xar external;
 
 declare variable $repo := 
-    "http://demo.exist-db.org/exist/apps/public-repo/modules/find.xql";
+    "https://exist-db.org/exist/apps/public-repo/find";
 
 (:~
  : Uninstall given package if it is installed.
