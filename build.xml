@@ -153,10 +153,10 @@
     <!-- Called on each directory in repos to build it -->
     <target name="build-xar">
         <echo message="Building ${dir}"/>
-        <echo message="Validating well-formedness of XML files in ${dir}"/>
+        <!--<echo message="Validating well-formedness of XML files in ${dir}"/>
         <xmlvalidate lenient="true">
             <fileset dir="${dir}" includes="**/**.xml,**/**.xconf" excludes="node_modules/**"/>
-        </xmlvalidate>
+        </xmlvalidate>-->
         <subant>
             <fileset dir="${dir}">
                 <include name="build.xml"/>
@@ -417,10 +417,10 @@
         <propertyregex property="repo-name" input="${file-path.unix}"
             regexp="${apps.dir}/([^/]+)" select="\1" defaultvalue="Error"
             override="true"/>
-        <echo>Validating well-formedness of XML files in ${repo-name}</echo>
+        <!--<echo>Validating well-formedness of XML files in ${repo-name}</echo>
         <xmlvalidate lenient="true">
             <fileset dir="${apps.dir}/${repo-name}" includes="**/**.xml,**/**.xconf" excludes="node_modules/**"/>
-        </xmlvalidate>
+        </xmlvalidate>-->
         <subant>
             <fileset dir="${apps.dir}/${repo-name}">
                 <include name="build.xml"/>
@@ -447,10 +447,10 @@
             unless="${is-oxex-repo}"/>
         <propertyregex property="repo-name" input="${file-path.unix}"
             regexp="${apps.dir}/(.*)" select="\1" defaultvalue="Error" override="true"/>
-        <echo>Validating well-formedness of XML files in ${repo-name}</echo>
+        <!--<echo>Validating well-formedness of XML files in ${repo-name}</echo>
         <xmlvalidate lenient="true">
             <fileset dir="${apps.home}/${repo-name}" includes="**/**.xml,**/**.xconf" excludes="node_modules/**"/>
-        </xmlvalidate>
+        </xmlvalidate>-->
         <!-- for oxex's npm start process, we need to set NODE_ENV to "production" and ensure this property is inherited by subant -->
         <property name="NODE_ENV" value="production"/>
         <subant inheritall="true">
