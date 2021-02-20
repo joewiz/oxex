@@ -32,6 +32,6 @@ To install these dependencies on macOS with [Homebrew](https://brew.sh), just ru
 - Select the "Setup oxex" command to download required libraries for interacting with eXist. This is only needed once.
 - Using oXygen's project pane, open a file in one of your eXist applications (e.g., `workspace/my-app/my-file`).
 - Select the "Upload current file to localhost" to upload the file to the database (e.g., `/db/apps/my-app/my-file`) (keyboard shortcut: command-u).
-- Select the "Deploy current repository to localhost" to call the app's own `build.xml` file and upload and deploy the resulting `.xar` file (conventionally stored in the repo's build directory)..
+- Select the "Deploy current repository to localhost" to call the app's own `build.xml` file and upload and deploy the resulting `.xar` file (conventionally stored in the repo's build directory; keyboard shortcut: command-shift-u).
 
 These functions can be called directly from the command line, but they are geared toward use from oXygen. Additional functions are contained in `build.xml`, which could be exposed if there is interest.
