@@ -370,7 +370,7 @@
     </target>
 
     <target name="update-repo"
-        description="Fetch updates for the parent repo of a file (from an oxex repo)"
+        description="Pull updates for the parent repo of a file (from an oxex repo)"
         depends="deploy.init">
         <property name="directory" value="${directory}"/>
         <path id="parent-dir">
